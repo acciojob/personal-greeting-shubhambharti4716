@@ -3,15 +3,17 @@ import React, { useState } from "react";
 import './../styles/App.css';
 
 const App = () => {
-  const [name,setName] = useState("");
+  const [userName,setUserName] = useState("");
   return (
     <div>
         {
           /* Do not remove the main div */
-          <>
-          <p>Enter your name:</p>
-          <input onChange={(e) => setName(e.target.value)}></input>
-          <p>{name}</p>
+          /* empty fragments  */
+          <> 
+          <form action="">
+            <input type="text" onChange={(e)=>setUserName(e.target.value)}/>
+          </form>
+          <p>Hello {userName}!</p>
           </>
         }
     </div>
